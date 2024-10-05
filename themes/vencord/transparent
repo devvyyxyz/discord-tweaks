@@ -1,59 +1,20 @@
-/*  imports */
+/**
+ * @name Dev
+ * @author Devvyyxyz
+ * @description transpaent theme
+ * @version 0.0.1
+ */
+ 
+ /*  imports */
 @import url("https://tiredmala.github.io/animcord/animcordmain.css");
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css");
 @import url("https://nyri4.github.io/Discolored/main.css");
-@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
+/* @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css"); */
 
 @import url("https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/refs/heads/master/Themes/BlurpleRecolor/BlurpleRecolor.css");
 @import url(https://capnkitten.github.io/BetterDiscord/Themes/Translucence/css/source.css);
 
 :root {
-	--app-bg: rgba(0,0,0,0);
-	--app-blur: 6px;
-	--app-margin: 24px;
-	--app-radius: 8px; 
-	
-	--accent-hue: 57; /*main colour*/
-	--accent-saturation: 77.5%;
-	--accent-lightness: 47.1%;
-	--accent-opacity: 1;
-	--accent-text-color: #000; 
-
-	--sidebar-color: rgba(0,0,0,0.4);
-	--main-content-color: rgba(0,0,0,0.2); 
-
-	--message-color: rgba(0,0,0,0.4);
-	--message-radius: 8px;
-	--message-padding-top: 8px;
-	--message-padding-side: 8px; 
-	
-	--reply-hue: 226;
-	--reply-saturation: 77.4%;
-	--reply-lightness: 61.8%;
-	--reply-opacity: 1; 
-
-	--textarea-color: 255,255,255;
-	--textarea-alpha: 0.1;
-	--textarea-alpha-focus: 0.15;
-	--textarea-text-color: #fff;
-	--textarea-radius: 22px;  
-
-	--card-color: rgba(0,0,0,0.4);
-	--card-color-hover: rgba(0,0,0,0.5);
-	--card-color-select: rgba(0,0,0,0.7); 
-	
-	--button-height: 32px;
-	--button-padding: 0 16px;
-	--button-action-color: #000;
-	--button-radius: 16px;
-
-	--interactive-normal: #aaa;
-	--interactive-hover: #ddd;
-	--interactive-active: #fff;
-	--interactive-muted: #777;
-
-	--background-modifier-hover: rgba(255,255,255,0.075);
-	--background-modifier-selected: rgba(255,255,255,0.125);
 	
 /****************************************************************************************
 ██████╗ ██╗     ██╗   ██╗██████╗ ██████╗ ██╗     ███████╗██████╗ ███████╗ ██████╗ ██████╗ ██╗      ██████╗ ██████╗ 
@@ -93,26 +54,111 @@
    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═════╝  ╚═════╝╚══════╝╚═╝  ╚═══╝ ╚═════╝╚══════╝
  chatsp
 *****************************************************************************************/
-	--accentcolor:				88, 101, 242;
-	--accentcolor2:				255, 115, 250;
-	--linkcolor:				0, 176, 244;
-	
-	
-	--accentcolor_v:			var(--accentcolor_s, var(--accentcolor));
-	--accentcolor2_v:			var(--accentcolor2_s, var(--accentcolor2));
-	--linkcolor_v:				var(--linkcolor_s, var(--linkcolor));
-	
-	
-	--accentcolor-hover:			rgb(var(--accentcolor_v)) linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-	--accentcolor-active:			rgb(var(--accentcolor_v)) linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-	--accentcolor2-hover:			rgb(var(--accentcolor2_v)) linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-	--accentcolor2-active:			rgb(var(--accentcolor2_v)) linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-	
-	--bdfdb-blurple:			rgb(var(--accentcolor_v)) !important;
-	--bd-blue:				rgb(var(--accentcolor_v)) !important;
-	--bd-blue-hover:			var(--accentcolor-hover) !important;
-	--bd-blue-active:			var(--accentcolor-active) !important;
-	--blurple:				rgb(var(--accentcolor_v)) !important;
+  --app-bg: rgba(255, 255, 255, 0);
+  --app-blur: 100px;
+  --app-margin: 24px;
+  --app-radius: 15px; /* corners roundedness */
+  --main-rgb: 0,0,0;
+  --main-content-opacity: 0.2;
+  --sidebar-opacity: 0.4;
+  --main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
+  --sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
+  --accent-hue: 62; /* main colour */
+  --accent-saturation: 77.5%;
+  --accent-lightness: 47.1%;
+  --accent-hsl: var(--accent-hue),calc(var(--accent-saturation) * var(--saturation-factor)),var(--accent-lightness);
+  --accent-opacity: 1;
+  --accent-text-color: #000;
+  --alert-hue: 359;
+  --alert-saturation: 66.7%;
+  --alert-lightness: 54.1%;
+  --alert-hsl: var(--alert-hue),calc(var(--alert-saturation) * var(--saturation-factor)),var(--alert-lightness);
+  --alert-opacity: 1;
+  --alert-action-color: #fff;
+  --alert-text-color: #fff;
+  --message-color: rgba(0,0,0,0.4);
+  --message-color-hover: rgba(0,0,0,0.55);
+  --message-radius: var(--app-radius);
+  --message-padding-top: 8px;
+  --message-padding-side: 8px;
+  --mention-hue: var(--accent-hue);
+  --mention-saturation: var(--accent-saturation);
+  --mention-lightness: var(--accent-lightness);
+  --mention-hsl: var(--mention-hue),calc(var(--mention-saturation) * var(--saturation-factor)),var(--mention-lightness);
+  --mention-opacity: 1;
+  --reply-hue: 226;
+  --reply-saturation: 77.4%;
+  --reply-lightness: 61.8%;
+  --reply-hsl: var(--reply-hue),calc(var(--reply-saturation) * var(--saturation-factor)),var(--reply-lightness);
+  --reply-opacity: 1;
+  --notification-color: #fff;
+  --list-item-radius: var(--app-radius);
+  --textarea-color: 255,255,255;
+  --textarea-alpha: 0.1;
+  --textarea-alpha-focus: 0.15;
+  --textarea-text-color: #fff;
+  --textarea-placeholder-color: #aaa;
+  --textarea-radius: 22px;
+  --textarea-block-color: rgba(0,0,0,0.4);
+  --textarea-block-text-color: #ccc;
+  --input-height: 36px;
+  --input-radius: calc(var(--input-height) / 2);
+  --card-color: rgba(0,0,0,0.4);
+  --card-color-hover: rgba(0,0,0,0.5);
+  --card-color-select: rgba(0,0,0,0.625);
+  --card-radius: var(--app-radius);
+  --card-header-shadow: 0px 3px 9px 0px rgba(0,0,0,0.25);
+  --button-height: 32px;
+  --button-padding: 0 16px;
+  --button-color: hsla(var(--accent-hsl),var(--accent-opacity));
+  --button-action-color: #000;
+  --button-text-color: var(--accent-text-color);
+  --button-radius: 16px;
+  --switch-slider-color: hsla(218,4.6%,46.9%,0.85);
+  --switch-knob-color: hsl(0,0%,13%);
+  --popout-color: rgba(0,0,0,0.55);
+  --popout-blur: 8px;
+  --popout-header-opacity: 0.3;
+  --popout-header-shadow: 0px 3px 9px 0px rgba(0,0,0,0.25);
+  --popout-radius: var(--app-radius);
+  --popout-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+  --nowplaying-color: 88,101,242;
+  --streaming-color: 89,54,149;
+  --spotify-color: 29,185,84;
+  --server-folder-color: rgba(255,255,255,0.1);
+  --supporter-color: hsla(var(--accent-hsl),var(--accent-opacity));
+  --tooltip-color: hsla(var(--accent-hsl),var(--accent-opacity));
+  --tooltip-text-color: var(--accent-text-color);
+  --tooltip-font-size: 14px;
+  --tooltip-padding: 8px 12px;
+  --tooltip-radius: var(--app-radius);
+  --tooltip-shadow: var(--elevation-high);
+  --interactive-normal: #aaa;
+  --interactive-hover: #ddd;
+  --interactive-active: #fff;
+  --interactive-muted: #777;
+  --channels-default: #aaa;
+  --header-secondary: #dfdfdf;
+  --background-primary: transparent;
+  --channels-default: var(--interactive-normal);
+  --text-muted: var(--interactive-normal);
+  --transition-time: 250ms;
+  --transition-type: cubic-bezier(0.4,0,0.2,1);
+  --scrollbar-color: 255,255,255;
+  --scrollbar-color-alt: 0,0,0;
+  --scrollbar-opacity: 0.2;
+  --scrollbar-opacity-hover: 0.3;
+  --scrollbar-width: 10px;
+  
+  
+  --background-primary: var(--main-content-color) !important;
+  --text-normal: white !important;
+  
+  --interactive-normal: #cfcfcf;
+    --interactive-hover: var(--accent-hue),calc(var(--accent-saturation) * var(--saturation-factor)),var(--accent-lightness);
+    --interactive-active: #fff;
+    --interactive-muted: #777;
+  --channel-icon: var(--accent-hue),calc(var(--accent-saturation) * var(--saturation-factor)),var(--accent-lightness);
 }
 
 /****************************************************************************************
@@ -164,3 +210,197 @@ basesp
 ╚═╝     ╚═╝╚═╝╚══════╝ ╚═════╝
 miscsp
 ****************************************************************************************/
+
+
+/* 
+.sidebar_a4d4d9 {
+    background-color: transparent !important;
+} */
+.sidebar_a4d4d9 {
+    background-color: var(--main-content-color) !important;
+}
+
+
+
+
+
+
+
+
+
+/* better vencord icon */
+[data-list-item-id="guildsnav___1015060230222131221"] 
+[class*=icon] {
+  content:url("https://files.catbox.moe/39yx8f.jpg");
+}
+
+/* centered channel names */
+[class^="children_"]:not(:has([class^="topic_"])) [class^="titleWrapper_"] {
+    width:100%;
+  > h1 {
+    justify-content:center;
+    }
+}
+[class^="children_"]:has(.topic_bf3bbb) [class^="titleWrapper_"] {
+     width:50%;
+     > h1 {
+        justify-content: flex-end;
+     } 
+}
+[class^="title_"] [class^="children_"] [class^="iconWrapper_"] {
+    display: none;
+}
+
+
+/* gay folders */
+@keyframes rainbowBackgroundTransparent {
+  0% { background-color: rgba(255, 0, 0, 0.4); }      /* Red */
+  16% { background-color: rgba(255, 165, 0, 0.4); }    /* Orange */
+  33% { background-color: rgba(255, 255, 0, 0.4); }    /* Yellow */
+  50% { background-color: rgba(0, 128, 0, 0.4); }      /* Green */
+  66% { background-color: rgba(0, 0, 255, 0.4); }      /* Blue */
+  83% { background-color: rgba(75, 0, 130, 0.4); }     /* Indigo */
+  100% { background-color: rgba(238, 130, 238, 0.4); } /* Violet */
+}
+
+@keyframes rainbow {
+  0% { color: rgba(255, 0, 0, 1); }      /* Red */
+  16% { color: rgba(255, 165, 0, 1); }    /* Orange */
+  33% { color: rgba(255, 255, 0, 1); }    /* Yellow */
+  50% { color: rgba(0, 128, 0, 1); }      /* Green */
+  66% { color: rgba(0, 0, 255, 1); }      /* Blue */
+  83% { color: rgba(75, 0, 130, 1); }     /* Indigo */
+  100% { color: rgba(238, 130, 238, 1); } /* Violet */
+}
+
+[aria-label*=gay] [class*=folderIconWrapper] {
+  animation: rainbowBackgroundTransparent 5s infinite;
+  transition: background-color 0.5s ease;
+}
+
+[aria-label*=gay] [class*=folderIconWrapper] svg {
+  animation: rainbow 5s infinite;
+  transition: color 0.5s ease;
+}
+
+/* hmmm */
+.emoji[alt="🤫"], img[src$="7983a576631eafce8bfb.svg"] {
+  content: url("https://i.imgur.com/wBs1Wk9.jpeg");
+}
+
+/* Make Delete/Logout Buttons Red */
+[class^=item_][data-tab-id="DELETE"],
+[class^=item_][data-tab-id="logout"] {
+    color: var(--info-danger-foreground) !important;
+}
+[class^=item_][data-tab-id="DELETE"]:hover,
+[class^=item_][data-tab-id="logout"]:hover {
+    background-color: var(--info-danger-background) !important;
+}
+
+/* Transgender Boost Gradient; Recolors the boosting gradient to be the best flag ever */
+body {
+    --guild-boosting-blue: #60d0fa, #f5acba, #ffffff;
+    --guild-boosting-purple: #ffffff, #f5acba, #60d0fa;
+}
+
+
+/* usable on low width */
+@media (max-width: 1100px)
+{
+    [class*="sidebar_"]
+    {
+        width: 200px;
+        .vc-typing-indicator, .vc-channelemojis-emoji, [class*="guildIconV2Container_"]
+        {
+            display: none;
+        }
+        [class*="containerDefault_"]
+        {
+            [role="img"]
+            {
+                display: none;
+            }
+        }
+    }
+    [class*="chat_"]
+    {
+        [class*="membersWrap_"]
+        {
+            display: none;
+        }
+    }
+}
+
+/* View both STATUS and USERNAME at the same time */
+[class^=hovered], [class^=hoverRoll][class*=forceHover]:not([class^=disabled]) > [class^=default]
+{
+  opacity: 1!important;
+  transform: none;
+}
+[class^=avatarWrapper_] [class^=nameTag_] [class^=hovered_]::before{
+    content: "@";
+}
+[class^=hoverRoll] > [class^=default]
+{
+  margin-top: 15px;
+}
+
+/*     Visible Server Banner     */
+[class^="container_"]:not([class*="bannerVisible_"]) >
+[class^="animatedContainer_"] {
+  top: 3px;
+}
+[class*="animatedContainer_"] {
+  opacity: 1 !important;
+}
+[class*="headerContent_"] {
+  filter: drop-shadow(0 1px 1px var(--bg-backdrop));
+}
+/* AMOLEDCord fix */
+[class^="sidebar_"] header {
+  background-color: transparent !important;
+}
+
+/* Color the message pill with ping and new posts color */
+/*     Blue Pill      */
+[class^="iconVisibility_"]:has([style="color: var(--text-brand);"]) > [class^="unread_"] {
+  background-color: var(--text-brand);
+}
+/*     Red Pill      */
+[class^="iconVisibility_"]:has([class^="mentionsBadge_"]) > [class^="unread_"] {
+  background-color: var(--status-danger);
+}
+
+/* redesigned user area */
+[class^=panels] > [class^=container] /* User area redesign */
+{
+    height: unset !important; /* Height being dynamic is fine */
+    align-items: unset !important; /* Don't need that */
+    padding: 6px 8px !important; /* Let those boxes breathe */
+    flex-direction: column-reverse !important; /* instead of going one next to the other, go stacked */
+    gap: 2px !important; /* Again let them breathe */
+}
+
+[class^=avatarWrapper] /* Change the user box */
+{
+    margin-right: unset !important; /* Useless */
+    margin-left: unset !important; /* Useless */
+    padding-left: 4px !important; /* Make it slightly bigger for consistency with the right side */
+}
+
+[class^=container] > [class*=buttons] /* Change the quick actions */
+{
+    justify-content: space-evenly !important; /* Let them breathe */
+}
+
+/* App launcher reposition */
+.channelTextArea_a7d72e {
+    position: relative;
+}
+
+.channelAppLauncher_df39bd {
+    position: absolute;
+    top: -50px;
+    right: 16px;;
+}
